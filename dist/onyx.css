@@ -1,0 +1,207 @@
+/* Paths */
+/* application importing Onyx Less files will have to override this  */
+/* variable. Otherwise, Onyx image load will fail with a 404 error  */
+/* Fonts */
+/* ---------------------------------------*/
+/* Text Colors */
+/* ---------------------------------------*/
+/* Background Colors */
+/* ---------------------------------------*/
+/* Border Radius */
+/* ---------------------------------------*/
+/* Padding */
+/* ---------------------------------------*/
+/* Icon Sizes */
+/* ---------------------------------------*/
+/* Disabled Opacity */
+/* ---------------------------------------*/
+/* Gradient Overlays */
+/* ---------------------------------------*/
+/* Images */
+/* ---------------------------------------*/
+
+/* onyx-classes.less - combined CSS (less) files for all released Onyx controls
+   into single onyx.less file to avoid IE bug that allows
+   a maximum of 31 style sheets to be loaded before silently failing */
+.onyx {
+  color: #333333;
+  font-family: 'Helvetica Neue', 'Nimbus Sans L', Arial, sans-serif;
+  font-size: 20px;
+  cursor: default;
+  background-color: #EAEAEA;
+  /* remove automatic tap highlight color */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* prevent IE from inheriting line-height for these elements */
+  /* some default colors */
+}
+.onyx .onyx-button,
+.onyx .onyx label,
+.onyx .onyx input {
+  line-height: normal;
+}
+.onyx .onyx-selected {
+  background-color: #C4E3FE;
+}
+.onyx .onyx-dark {
+  background-color: #555656;
+}
+.onyx .onyx-light {
+  background-color: #cacaca;
+}
+.onyx .onyx-green {
+  background-color: #91BA07;
+}
+.onyx .onyx-red {
+  background-color: #C51616;
+}
+.onyx .onyx-blue {
+  background-color: #35A8EE;
+}
+/* LESS pre-calculations */
+
+/* Toolbar.css */
+.onyx-toolbar {
+  /*
+		line-height is unreliable for centering, instead
+		use vertical-align: middle to align
+		elements along a common centerline and use
+		padding to fill out the space.
+	*/
+  padding: 9px 8px 10px 8px;
+  /**/
+  border: 1px solid #3A3A3A;
+  background: #4C4C4C url('onyx/images/gradient.png') repeat-x 0 bottom;
+  background-size: contain;
+  color: white;
+  /**/
+  white-space: nowrap;
+  overflow-y: visible;
+  font-size: 20px;
+}
+.onyx-toolbar-inline > *,
+.enyo-fittable-columns-layout.onyx-toolbar-inline > * {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4px 6px 5px;
+  box-sizing: border-box;
+}
+/* needed for MathJax support */
+.onyx-toolbar-inline > script,
+.enyo-fittable-columns-layout.onyx-toolbar-inline > script {
+  display: none;
+}
+.onyx-toolbar .onyx-icon-button {
+  margin: 3px 2px 1px;
+}
+.onyx-toolbar .onyx-button {
+  color: #F2F2F2;
+  background-color: #555656;
+  border-color: rgba(15, 15, 15, 0.5);
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 36px;
+}
+.onyx-toolbar .onyx-input-decorator {
+  margin: 1px 3px;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0px 6px 5px 6px;
+}
+.onyx-toolbar .onyx-input-decorator.onyx-focused {
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+.onyx-toolbar .onyx-input-decorator .onyx-input {
+  color: #e5e5e5;
+  font-size: 14px;
+}
+.onyx-toolbar .onyx-input-decorator .onyx-input:focus {
+  color: #000;
+}
+.onyx-toolbar .onyx-input-decorator .onyx-input:focus::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+/* Button.css */
+.onyx-button {
+  outline: 0;
+  /**/
+  color: #292929;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  /**/
+  margin: 0;
+  padding: 6px 18px;
+  overflow: hidden;
+  /**/
+  border-radius: 3px;
+  /* for IE8 */
+  border: 1px solid #707070;
+  border: 1px solid rgba(15, 15, 15, 0.2);
+  /*
+		The border and the gradient interact in a strange way that
+		causes the bottom-border (top if the gradient is aligned top)
+		to be lighter than other borders.
+		We can fix it by using the darker bottom border below, but
+		then there are a few rogue pixels that end up very dark.
+	*/
+  /* border-bottom: 1px solid rgba(15, 15, 15, 0.5); */
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  /**/
+  background: #E1E1E1 url('onyx/images/gradient.png') repeat-x bottom;
+  background-size: contain;
+  /**/
+  text-overflow: ellipsis;
+  /* the following cause arcane problems on IE */
+  /*
+	min-width: 14px;
+	min-height: 20px;
+	*/
+}
+/*
+	IE8 can't handle these selectors in tandem:
+	.onyx-button.active, .onyx-button:active:not([disabled]) {
+
+	the effect is as if .onyx-button.active doesn't exist
+*/
+.onyx-button.active,
+.onyx-button.pressed {
+  background-image: url('onyx/images/gradient-invert.png');
+  background-position: top;
+  border-top: 1px solid rgba(15, 15, 15, 0.6);
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.onyx-button[disabled] {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+.onyx-button > img {
+  padding: 0px 3px;
+}
+/* Remove the focused inner-border style in Firefox (Windows) */
+.onyx-button::-moz-focus-inner {
+  border: 0;
+}
+/* ButtonColors.css */
+.onyx-button.onyx-blue {
+  background-color: #35A8EE;
+  color: #F2F2F2;
+}
+.onyx-button.onyx-affirmative {
+  background-color: #91BA07;
+  color: #F2F2F2;
+}
+.onyx-button.onyx-negative {
+  background-color: #C51616;
+  color: #F2F2F2;
+}
+.onyx-button.onyx-dark {
+  background-color: #555656;
+  color: #F2F2F2;
+}
+.onyx-button.onyx-light {
+  background-color: #cacaca;
+  color: #2F2F2F;
+}
+
