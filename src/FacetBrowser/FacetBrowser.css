@@ -1,0 +1,10 @@
+.facets{
+	padding: 0px 0px 0px 0px;
+}
+.facet-focus{
+	box-shadow: 3px 0px 4px #c0c0ff, -3px 0px 4px #b0b0ff;
+}
+
+.facet-list{
+	padding-right: 2px;
+}

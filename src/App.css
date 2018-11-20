@@ -1,0 +1,173 @@
+/*
+	Put anything you reference with "url()" in ../assets/
+	This way, you can minify your application, and just remove the "source" folder for production
+*/
+.nice-padding {
+	padding: 15px;
+}
+
+.app-panels > * {
+    width: 100%;
+    background-color: #EAEAEA;
+    box-shadow: -4px -4px 4px rgba(0,0,0,0.3);
+}
+
+@media all and (max-width: 600px) {
+    .app-panels > * {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.onyx-button {
+	font-size: 12px;
+	margin-right: 3px;
+}
+.onyx-toolbar {
+	font-size: 12px;
+}
+.onyx-input {
+	color: silver;
+}
+.onyx-input-decorator.onyx-focused  {
+    background-color: #c0c0ff;
+}
+.onyx-input-decorator.onyx-focused > input {
+	color: #404040;
+}
+.onyx-groupbox > * {
+	font-size: 12px;
+}
+.onyx-toolbar .onyx-input-decorator.onyx-focused {
+    background-color: #c0c0ff;
+}
+.app {
+	font-size: 12px;
+}
+
+.app-popup-title {
+	font-size: 20px;
+}
+
+.app-popup-message {
+	font-size: 14px;
+	color: silver;
+}
+
+.app-button {
+	font-size: 12px;
+	width: 35px; 
+	height: 35px;
+    border: none;
+    background-color: transparent; 
+	background-size: 100%; 
+	background-image: url('../assets/ncpv-glossy-ball.gif');
+	color: #404040;
+	text-shadow: 3px 0px 4px #b0b0ff, -3px 0px 4px #b0b0ff,
+	-1px -1px 0 rgba(255, 255, 255, 0.2),
+    1px -1px 0 rgba(255, 255, 255, 0.2),
+    -1px 1px 0 rgba(255, 255, 255, 0.2),
+    1px 1px 0 rgba(255, 255, 255, 0.2);
+	text-align: center; 
+	padding-right: 10px;
+	margin-top: 3px;
+}
+.app-init-button {
+	font-size: 20px;
+    cursor: pointer;
+	width: 150px; 
+	height: 150px;
+    top: 50%;
+	left: 50%;
+    margin: -75px 0 0 -75px;
+    position: fixed;
+}
+
+.formatted-button-disabled {
+	color: red;
+}
+.formatted-scroller{
+	color: black;
+	background-color: white;
+	font-size: 12pt;
+}
+.formatted-scroller .enyo-thumb {
+	background: black;
+}
+
+
+.formatted-data {
+	-moz-column-count: 2	; /* Firefox */
+	-moz-column-gap:40px; 
+	-moz-column-rule:4px outset #ff00ff; 
+	-webkit-column-count: 2	; /* Safari, Chrome */
+	-webkit-column-gap:40px; 
+	-webkit-column-rule:4px outset #ff00ff; 
+	column-count: 2	; /* IE10 */
+	column-gap:40px; 
+	column-rule:4px outset #ff00ff; 
+}
+
+.formatted-data .title {
+	color: black;
+	background-color: #ffffdd;;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+}
+.formatted-data .subtitle {
+	color: blue;
+	background-color: #ffffdd;;
+	font-size: 18px;
+	font-style: italic;
+	text-align: center;
+	display: block;
+}
+.formatted-data .lyrics {
+}
+.formatted-data .chords {
+	font-weight: bold;
+	padding-right: 4pt;
+}
+.formatted-data .comment {
+	background-color: #eeeeee;
+}
+.formatted-data .italic {
+	font-style: italic;
+}
+.formatted-data .box {
+	border: 1px solid;
+}
+.formatted-data .chorus {
+	color: navy;
+	background-color: #ffffdd;
+	font-style: normal;
+}
+.formatted-data .tab {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 8pt; 
+	font-style: normal;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.formatted-chords {
+	color: #ffffff;
+	height: 60px;
+	padding: 2px;
+	background-color: rgba(0,0,0,.8);
+	font-family: "Courier New", Courier, monospace;
+}
+.formatted-chords-grid {
+	width: 50px;
+	height: 50px;
+	margin-right: 2px;
+	border: 1px solid;
+}
+.formatted-chords-grid-user {
+	color: #ffff00;
+}
+.formatted-chords-grid-clickable {
+	cursor: pointer;
+}

@@ -1,0 +1,57 @@
+.udo-list{
+}
+.udo-list-item {
+	font-size: 14px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: silver;
+	background-image: url('../lib/onyx/images/gradient.png');
+	background-size: 100% 100%; 
+	background-repeat: no-repeat; 
+}
+.udo-list-item > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.udo-list-item-selected {
+	color: #404040;
+	background-color: #c0c0ff;
+}
+.udo-list-item-text{
+}
+.udo-list-item-move-button{
+	float: right; 
+	display: none;
+	font-weight: bold;
+}
+.udo-list-item-remove-button{
+	float: right; 
+	display: none;
+	font-weight: bold;
+}
+.udo-list-header {
+	font-size: 20px;
+	color: #404040;
+	text-shadow: 3px 0px 4px #b0b0ff, -3px 0px 4px #b0b0ff,
+	-1px -1px 0 rgba(255, 255, 255, 0.2),
+    1px -1px 0 rgba(255, 255, 255, 0.2),
+    -1px 1px 0 rgba(255, 255, 255, 0.2),
+    1px 1px 0 rgba(255, 255, 255, 0.2);
+	background-color: rgba(0, 0, 0, 0.1);
+	text-align: center; 
+}
+.udo-list-footer {
+	font-size: 16px;
+	color: silver;
+	text-shadow: 3px 0px 4px #b0b0ff, -3px 0px 4px #b0b0ff,
+	-1px -1px 0 rgba(0, 0, 0, 0.2),
+    1px -1px 0 rgba(0, 0, 0, 0.2),
+    -1px 1px 0 rgba(0, 0, 0, 0.2),
+    1px 1px 0 rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.1);
+	text-align: center; 
+}
+.udo-list .enyo-thumb {
+	background: silver;
+}
